@@ -4,7 +4,7 @@ import { Dimensions, StyleSheet, Text, View, Pressable } from 'react-native';
 import Animated from 'react-native-reanimated';
 
 const Question10 = () => {
-    const navigation = useNavigationn();
+    const navigation = useNavigation();
     
     return (
         <View>
@@ -16,11 +16,11 @@ const Question10 = () => {
                 <View style = {styles.answersContainer}>
                     <Text style = {styles.answersText}>Watchman is an open source project developed by Facebook. As the name of the software correctly suggests that it watches files and keep track of changes in files. It can also trigger action based on file change. React native uses watchman to provide hot reloading feature of React Native. Hot reloading of React native application helps the developer to build application faster. </Text>
                 </View>
-                
-                <Pressable style = {styles.button} onPress = {() => navigation.navigate("Question2")}>
-                    <Text style = {styles.buttonText}>Next Question</Text>
-                </Pressable>
             </Animated.View>
+                
+            <Pressable style = {styles.button} onPress = {() => navigation.navigate("Home")}>
+                <Text style = {styles.buttonText}>Next Question</Text>
+            </Pressable>
         </View>
     )
 }

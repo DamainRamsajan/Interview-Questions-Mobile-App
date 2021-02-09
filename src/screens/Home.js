@@ -2,6 +2,7 @@ import { useNavigation } from '@react-navigation/native'
 import React from 'react'
 import { StyleSheet, Text, View, Image, Dimensions, Pressable } from 'react-native'
 import Animated from 'react-native-reanimated';
+// import { FontAwesome5 } from '@expo/vector-icons'; 
 
 const Home = () => {
     const navigation = useNavigation();
@@ -10,6 +11,7 @@ const Home = () => {
             <Image style = {styles.image} source= {require("../../assets/logo.png")}/>
             <Animated.View style ={styles.roundTop}></Animated.View>
             <Animated.View style = {styles.bottomBox} >
+                {/* <FontAwesome5 name="react" size={24} color="black" /> */}
                 <Text style = {styles.bottomTitle} >React Native </Text>
                 <Text style = {styles.bottomBody} >Job Interview Questions and Answers</Text>
                 <Pressable style = {styles.button} onPress = {() => navigation.navigate("Question1")}>
@@ -50,7 +52,6 @@ const styles = StyleSheet.create({
         fontSize: 36,
         color: "white",
         textAlign: "center",
-        marginTop: 10,
 
     },
     bottomBody: {
@@ -65,7 +66,7 @@ const styles = StyleSheet.create({
         height: 70,
         width: Dimensions.get("screen").width - 120, 
         borderRadius: 60,
-        marginTop: 50,
+        marginTop: 20,
         justifyContent: "center",
     },
     buttonText: {

@@ -17,11 +17,14 @@ const Question1 = () => {
                     <Text style = {styles.answersText}>Watchman is an open source project developed by Facebook. As the name of the software correctly suggests that it watches files and keep track of changes in files. It can also trigger action based on file change. React native uses watchman to provide hot reloading feature of React Native. Hot reloading of React native application helps the developer to build application faster. </Text>
                 </View>
                 
-                <Pressable style = {styles.button} onPress = {() => navigation.navigate("Question2")}>
+
+
+                <View style = {{height: 100}}></View>
+            </Animated.View>
+
+            <Pressable style = {styles.button} onPress = {() => navigation.navigate("Question2")}>
                     <Text style = {styles.buttonText}>Next Question</Text>
                 </Pressable>
-                <View style = {{height: 10}}></View>
-            </Animated.View>
         </View>
     )
 }

@@ -4,23 +4,23 @@ import { Dimensions, StyleSheet, Text, View, Pressable } from 'react-native';
 import Animated from 'react-native-reanimated';
 
 const Question4 = () => {
-    const navigation = useNavigationn();
+    const navigation = useNavigation();
     
     return (
         <View>
             <Animated.View style ={styles.roundTop}></Animated.View>
             <Animated.View style = {styles.bottomBox} >
                 {/* <Text style = {styles.bottomTitle} >React Native </Text> */}
-                <Text style = {styles.bottomBody} >Why do you need to install Watchman when setting up the development environment for React Native on Mac OS? </Text>
+                <Text style = {styles.bottomBody} >Question 4 development environment for React Native on Mac OS? </Text>
                 
                 <View style = {styles.answersContainer}>
                     <Text style = {styles.answersText}>Watchman is an open source project developed by Facebook. As the name of the software correctly suggests that it watches files and keep track of changes in files. It can also trigger action based on file change. React native uses watchman to provide hot reloading feature of React Native. Hot reloading of React native application helps the developer to build application faster. </Text>
                 </View>
-                
-                <Pressable style = {styles.button} onPress = {() => navigation.navigate("Question5")}>
-                    <Text style = {styles.buttonText}>Next Question</Text>
-                </Pressable>
             </Animated.View>
+                
+            <Pressable style = {styles.button} onPress = {() => navigation.navigate("Question5")}>
+                <Text style = {styles.buttonText}>Next Question</Text>
+            </Pressable>
         </View>
     )
 }

@@ -17,6 +17,7 @@ import Question7 from './src/screens/Question7';
 import Question8 from './src/screens/Question8';
 import Question9 from './src/screens/Question9';
 import Question10 from './src/screens/Question10';
+import HomeTabNavigator from './src/navigation/HomeTabNavigator';
 
 const Stack = createStackNavigator ();
 
@@ -31,7 +32,8 @@ export default function App() {
     <NavigationContainer>
      <StatusBar style="light" />
       <Stack.Navigator screenOptions = {globalScreenOptions}>          
-          <Stack.Screen name = "Home" component = {Home} options = {{title: "Ace your React Native Interview"}}/>
+          <Stack.Screen name = "HomeScreen" component = {HomeTabNavigator} options = {{title: "Ace your React Native Interview"}}/>
+          {/* <Stack.Screen name = "Home" component = {Home} options = {{title: "Ace your React Native Interview"}}/> */}
           <Stack.Screen name = "Question1" component = {Question1} options = {{title: "React Native Interview Questions"}}/>  
           <Stack.Screen name = "Question2" component = {Question2} options = {{title: "React Native Interview Questions"}}/>
           <Stack.Screen name = "Question3" component = {Question3} options = {{title: "React Native Interview Questions"}}/>
