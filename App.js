@@ -11,17 +11,17 @@ import Home from './src/screens/Home';
 const Stack = createStackNavigator ();
 
 const globalScreenOptions = {
-  headerStyle: {backgroundColor: "#2A4E70"},
-  headerTitleStyle: {color: "white"},
+  headerStyle: {backgroundColor: "#883000"},
+  headerTitleStyle: {color: "#09b1ec", alignSelf: "center"},
   headerTintColor: "white",
 }
 
 export default function App() {
   return (
     <NavigationContainer>
-        <StatusBar style="auto" />
-        <Stack.Navigator screenOptions = {globalScreenOptions}>
-        <Stack.Screen name = "Home" component = {Home} options = {{title: "Stretch Your Imagination"}}/>      
+     <StatusBar style="auto" />
+      <Stack.Navigator screenOptions = {globalScreenOptions}>          
+          <Stack.Screen name = "Home" component = {Home} options = {{title: "Ace your React Native Interview"}}/>      
       </Stack.Navigator>
     </NavigationContainer>
 
