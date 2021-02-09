@@ -1,17 +1,20 @@
+import { useNavigation } from '@react-navigation/native'
 import React from 'react'
-import { StyleSheet, Text, View, Image, Dimensions } from 'react-native'
-import Animated from 'react-native-reanimated'
+import { StyleSheet, Text, View, Image, Dimensions, Pressable } from 'react-native'
+import Animated from 'react-native-reanimated';
 
 const Home = () => {
+    const navigation = useNavigation();
     return (
         <View>
             <Image style = {styles.image} source= {require("../../assets/logo.png")}/>
             <Animated.View style ={styles.roundTop}></Animated.View>
             <Animated.View style = {styles.bottomBox} >
-                <Text style = {styles.bottomTitle} >React Native Job Interview Questions and Answers</Text>
-                <Animated.View style = {styles.button}>
+                <Text style = {styles.bottomTitle} >React Native </Text>
+                <Text style = {styles.bottomBody} >Job Interview Questions and Answers</Text>
+                <Pressable style = {styles.button} onPress = {() => navigation.navigate("Question1")}>
                     <Text style = {styles.buttonText}>Show Questions</Text>
-                </Animated.View>
+                </Pressable>
             </Animated.View>
         </View>
     )
@@ -50,12 +53,19 @@ const styles = StyleSheet.create({
         marginTop: 10,
 
     },
+    bottomBody: {
+        fontSize: 26,
+        color: "#ede0cc",
+        textAlign: "center",
+        marginTop: 10,
+
+    },
     button:{
         backgroundColor: "#09b1ec",
-        height: 50,
-        width: Dimensions.get("screen").width - 40, 
-        borderRadius: 10,
-        marginTop: 60,
+        height: 70,
+        width: Dimensions.get("screen").width - 120, 
+        borderRadius: 60,
+        marginTop: 50,
         justifyContent: "center",
     },
     buttonText: {
